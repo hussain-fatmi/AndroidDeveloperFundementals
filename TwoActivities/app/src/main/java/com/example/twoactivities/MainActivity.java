@@ -24,9 +24,23 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Initialize all the View variables
         mMessageEditText = findViewById(R.id.editText_main);
         mReplyHeadTextView = findViewById(R.id.text_header_reply);
         mReplyTextView = findViewById(R.id.text_message_reply);
+
+        // Restore the state.
+        if (savedInstanceState != null){
+            boolean isVisible = savedInstanceState.getBoolean("reply_visible");
+            // Show both the header and the message views. If isVisible is
+            // false or missing from the bundle, use the default layout.
+            if(isVisible){
+                mReplyHeadTextView.setVisibility(View.VISIBLE);
+                mReplyTextView.setText(savedInstanceState.getString("reply_text"));
+                mReplyTextView.setVisibility(View.VISIBLE);
+            }
+        }
     }
 
     @Override
