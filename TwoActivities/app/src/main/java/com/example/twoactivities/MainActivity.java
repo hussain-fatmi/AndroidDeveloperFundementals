@@ -30,6 +30,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        if(mReplyHeadTextView.getVisibility() == View.VISIBLE){
+            outState.putBoolean("reply_visible", true);
+            outState.putString("reply_text", mReplyTextView.getText().toString());
+        }
+    }
+
+    @Override
     public void onStart(){
         Log.d(LOG_TAG, "-------");
         super.onStart();
