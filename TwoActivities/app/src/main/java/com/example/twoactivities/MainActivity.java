@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchSecondActivity(View view) {
+        Log.d(LOG_TAG, "-------");
         Log.d(LOG_TAG, "Button Clicked!");
         Intent intent = new Intent(this, SecondActivity.class);
         String message = mMessageEditText.getText().toString();
