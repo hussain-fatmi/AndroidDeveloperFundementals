@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Three Buttons</string>
+    <string name="button_one">Text One</string>
+    <string name="button_two">Text Two</string>
+    <string name="button_three">Text Three</string>
+    <string name="text_main">Send Your Message!</string>
+    <string name="message_received">Message Received</string>
+    <string name="button_second">Reply</string>
+    <string name="editText_second">Enter Your Reply Here</string>
+    <string name="text_header_reply">Reply Received</string>
+</resources>
