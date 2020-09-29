@@ -8,4 +8,6 @@
     <string name="button_cheese">Cheese</string>
     <string name="button_milk">Milk</string>
     <string name="button_egg">Egg</string>
+    <string name="toast_message">Clearing Shopping List!</string>
+    <string name="toast_full">Warning! Shopping List is Full!</string>
 </resources>
