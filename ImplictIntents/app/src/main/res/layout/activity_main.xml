@@ -6,13 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+    <EditText
+        android:id="@+id/editText_website"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editText_location"
+        android:layout_width="match_parent"
+        android:text="https://developer.android.com"
+        android:hint="@string/editText_website"
+        android:inputType="textLongMessage"
+        android:layout_height="wrap_content"
+        android:autofillHints="Enter Website"/>
+
+    <EditText
+        android:id="@+id/editText_location"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_website"
+        app:layout_constraintBottom_toTopOf="@id/editText_share"
+        android:layout_width="match_parent"
+        android:text="Golden Gate Bridge"
+        android:hint="@string/editText_location"
+        android:inputType="textLongMessage"
+        android:layout_height="wrap_content"
+        android:autofillHints="Enter Website"/>
+
+    <EditText
+        android:id="@+id/editText_share"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:text="'Twas brillig and the slithy toves"
+        android:hint="@string/editText_share"
+        android:inputType="textLongMessage"
+        android:layout_height="wrap_content"
+        android:autofillHints="Enter Website"/>
+
+    <Button
+        android:id="@+id/open_website"
+        app:layout_constraintLeft_toLeftOf="@id/editText_website"
+        app:layout_constraintTop_toBottomOf="@id/editText_website"
+        android:text="@string/open_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/open_location"
+        app:layout_constraintLeft_toLeftOf="@id/editText_location"
+        app:layout_constraintTop_toBottomOf="@id/editText_location"
+        android:text="@string/open_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/share_text"
+        app:layout_constraintLeft_toLeftOf="@id/editText_share"
+        app:layout_constraintTop_toBottomOf="@id/editText_share"
+        android:text="@string/share_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
