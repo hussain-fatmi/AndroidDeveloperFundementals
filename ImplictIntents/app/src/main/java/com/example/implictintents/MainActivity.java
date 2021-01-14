@@ -11,9 +11,6 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText mWebsiteEditText;
-    private EditText mLocationEditText;
-    private EditText mShareEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openWebsite(View view) {
         // Get the URL text.
-        mWebsiteEditText = findViewById(R.id.editText_website);
+        EditText mWebsiteEditText = findViewById(R.id.editText_website);
 
         // Parse the URI and create the intent.
         String url = mWebsiteEditText.getText().toString();
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openLocation(View view) {
         // Get the location text.
-        mLocationEditText = findViewById(R.id.location_edittext);
+        EditText mLocationEditText = findViewById(R.id.editText_location);
 
         // Parse the location and create the intent
         String loc = mLocationEditText.getText().toString();
@@ -58,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void shareText(View view) {
         // Get the share text.
-        mShareEditText = findViewById(R.id.editText_share);
+        EditText mShareEditText = findViewById(R.id.editText_share);
 
         // Parse the text and create an intent
         String txt = mShareEditText.getText().toString();
@@ -69,6 +66,5 @@ public class MainActivity extends AppCompatActivity {
                 .setChooserTitle(R.string.share_text_with)
                 .setText(txt)
                 .startChooser();
-
     }
 }
