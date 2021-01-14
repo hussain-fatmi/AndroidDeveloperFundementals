@@ -11,6 +11,8 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private EditText mWebsiteEditText;
+    private EditText mLocationEditText;
+    private EditText mShareEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +36,22 @@ public class MainActivity extends AppCompatActivity {
             Log.d("ImplicitIntents", "Can't handle this!");
         }
 
+    }
+
+    public void openLocation(View view) {
+        // Get the location text.
+        mLocationEditText = findViewById(R.id.location_edittext);
+
+        // Parse the URI and create the intent
+        String loc = mLocationEditText.getText().toString();
+        Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
+        Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
+
+        // Find an activity to hand the intent and start that activity.
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "Can't handle this!");
+        }
     }
 }
