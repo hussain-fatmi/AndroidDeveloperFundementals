@@ -1,6 +1,7 @@
 package com.example.implictintents;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ShareCompat;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         // Get the location text.
         mLocationEditText = findViewById(R.id.location_edittext);
 
-        // Parse the URI and create the intent
+        // Parse the location and create the intent
         String loc = mLocationEditText.getText().toString();
         Uri addressUri = Uri.parse("geo:0,0?q=" + loc);
         Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
@@ -53,5 +54,21 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.d("ImplicitIntents", "Can't handle this!");
         }
+    }
+
+    public void shareText(View view) {
+        // Get the share text.
+        mShareEditText = findViewById(R.id.editText_share);
+
+        // Parse the text and create an intent
+        String txt = mShareEditText.getText().toString();
+        String mimeType = "text/plain";
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle(R.string.share_text_with)
+                .setText(txt)
+                .startChooser();
+
     }
 }

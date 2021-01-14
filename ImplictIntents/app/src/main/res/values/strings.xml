@@ -9,5 +9,6 @@
     <string name="open_website">OPEN WEBSITE</string>
     <string name="open_location">OPEN LOCATION</string>
     <string name="share_text">SHARE TEXT</string>
+    <string name="share_text_with">\"Share this text with: \"</string>
 
 </resources>
