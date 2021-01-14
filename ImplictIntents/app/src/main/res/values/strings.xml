@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Implict Intents</string>
-    <string name="editText_website">Enter website</string>
-    <string name="editText_location">Enter location</string>
-    <string name="editText_share">Enter text to share</string>
+    <string name="editText_website_hint">Enter website</string>
+    <string name="editText_location_hint">Enter location</string>
+    <string name="editText_share_hint">Enter text to share</string>
+    <string name="editText_website">http://developer.android.com</string>
+    <string name="editText_location">Golden Gate Bridge</string>
+    <string name="editText_share">\'Twas brillig and the slithy toves</string>
     <string name="open_website">OPEN WEBSITE</string>
     <string name="open_location">OPEN LOCATION</string>
     <string name="share_text">SHARE TEXT</string>
