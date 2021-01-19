@@ -3,10 +3,12 @@ package com.example.shoppinglist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -94,5 +96,23 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
             return -1;
         }
+    }
+
+    public void openLocation(View view) {
+        // Get the location text.
+        EditText mLocationEditText = findViewById(R.id.location);
+
+        // Parse the location and create the intent
+        String loc = mLocationEditText.getText().toString();
+        Uri addressUri =Uri.parse("geo:0,0?q=" + loc);
+        Intent intent =new Intent(Intent.ACTION_VIEW, addressUri);
+
+        // Find an activity to hand the intent and start that activity.
+        if(intent.resolveActivity(getPackageManager()) != null){
+            startActivity(intent);
+        } else{
+            Log.d("ShoppingList", "Cannot handle open shop");
+        }
+
     }
 }

@@ -2,6 +2,7 @@
     <string name="app_name">Shopping List</string>
     <string name="my_shopping_list">My Shopping List</string>
     <string name="add_button">Add Item</string>
+    <string name="loc_button">Go Shop</string>
     <string name="button_rice">Rice</string>
     <string name="button_potato">Potato</string>
     <string name="button_chicken">Chicken</string>
@@ -10,4 +11,5 @@
     <string name="button_egg">Egg</string>
     <string name="toast_message">Clearing Shopping List!</string>
     <string name="toast_full">Warning! Shopping List is Full!</string>
+    <string name="location_hint">Enter shop location</string>
 </resources>
