@@ -10,5 +10,6 @@
     <string name="open_location">OPEN LOCATION</string>
     <string name="share_text">SHARE TEXT</string>
     <string name="share_text_with">\"Share this text with: \"</string>
+    <string name="take_picture">Take a Picture</string>
 
 </resources>
