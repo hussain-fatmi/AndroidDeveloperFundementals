@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jboss.forge.addon:mockito:2.13.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.forge.addon/mockito/2.13.0/c12658f8011ab13c1ce70dd1a60f025faeec18f5/mockito-2.13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.forge.addon/mockito/2.13.0/684f4f2dbfd3a7560aeb47547efd93034dee4c4c/mockito-2.13.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.forge.addon/mockito/2.13.0/d2f76d9b948f8691c337207c221105ae827a0f88/mockito-2.13.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
